@@ -20,20 +20,13 @@
 import React from "react";
 import "./studentsList.style.css";
 import { students } from "./studentsData";
+import Card from "../card/Card";
 
 function StudentsList() {
-  const showStudents = () => {
-    return students.map((el, index) => {
-      return (
-        <div className="info" key={index}>
-          <img src={el.picture} width="50px" />
-          <h1>{el.name}</h1>
-          <p>{el.hobby}</p>
-        </div>
-      );
-    });
-  };
-  return <div className="info-container">{showStudents()}</div>;
+  const showStudents = students.map((el, index) => {
+    return <Card cardData={el} key={index} batch={1} />;
+  });
+  return <div className="info-container">{showStudents}</div>;
 }
 
 export default StudentsList;

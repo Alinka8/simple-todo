@@ -1,0 +1,8 @@
+.cars-container {
+  background-color: rgb(154, 159, 0);
+  border: 10px solid black;
+}
+
+img {
+  width: 100px;
+}

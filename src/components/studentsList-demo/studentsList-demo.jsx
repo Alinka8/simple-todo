@@ -1,20 +1,20 @@
 import React from "react";
-import { studentsDemo } from "./studentsDatademo";
+import { cars } from "../carsList/carsData";
 import "./studentsList-demo.style.css";
 
-function StudentsListDemo() {
-  const showStudents = () => {
-    return studentsDemo.map((el, index) => {
+function CarsList() {
+  const ShowStudents = () => {
+    return cars.map((el, index) => {
       return (
-        <div className="infoo" key={index}>
+        <div key={index}>
           <img src={el.picture} />
           <h1>{el.name}</h1>
-          <p>{el.hobby}</p>
+          <p>{el.description}</p>
         </div>
       );
     });
   };
-  return <div className="info-containerr">{showStudents()}</div>;
+  return <div>{ShowStudents()}</div>;
 }
 
-export default StudentsListDemo;
+export default CarsList;
